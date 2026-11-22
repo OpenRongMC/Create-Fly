@@ -1,35 +1,27 @@
-# Create Fly (RongMC)
+# Create Fly（RongMC 构建）
 
-[中文](#中文) | [English](#english)
+基于 Zurrtum 等社区的 **Create** Fabric 移植线，在 RongMC 建筑服使用的 **Minecraft 26.3** 构建（发布文件名 `rongmc-create-fly-*.jar`）。
 
-## 中文
+Create 是大型科技/动力传输模组：传动、加工、物流、列车等。详细玩法请参阅上游 Create 文档与社区教程。
 
-本仓库发布的是 **RongMC** 对 `Create (Fly / Zurrtum)` 的 Minecraft 26.3 Fabric 移植/维护或自研版本。
+## 重要限制（请先读）
 
-- Fabric mod id：`create`（provides：`create`）
-- 许可证：**GNU GPL v3.0**
-- 上游 Create 无本地可维护完整源码树；本仓仅含说明与 GPL 许可，构建产物见 Release。
-- 部分改动由 vibecoding（AI 辅助编程）完成，并由人工审阅与测试。
-- 贡献者（Contributors）：仅 [ycrrongos](https://github.com/ycrrongos)
+- **本仓库没有可维护的完整 Create 源码树**（本地仅有已构建 jar）。因此 Git 内只有说明与许可证；二进制见 Releases。
+- Fabric id **必须保持** `create`：`Create.class` 字节码写死 `getModContainer("create")`，强行改 id 会直接崩溃。
+- 仅 jar 文件名使用 `rongmc-` 前缀以区分发行渠道。
 
-> **Create Fly 例外 / Exception:** bytecode hardcodes `getModContainer("create")`, so Fabric id stays `create`; jar name uses `rongmc-` prefix.
+## 与常见原版 Create 发行的差异 / 注意
 
-### 许可
+- 版本线为 Fly/Zurrtum 26.3 适配构建（`6.0.9-2` 一带），不是 simibubi 官方 Forge/NeoForge 包。
+- 与官方 Create 模组包、其它分支（如 Create Fabric 官方移植）**不要混装**。
+- Ponder 教程在部分场景会崩；请同时安装 [Create-Fly-Ponder-Fix](https://github.com/OpenRongMC/Create-Fly-Ponder-Fix)。
 
-以 GNU General Public License v3.0 发布（见 `LICENSE`）。若上游原作另有条款，移植改动部分仍按 GPL-3.0；使用时请同时尊重上游要求。
+## 已知问题
 
-## English
+- Ponder：sided filter `orElseThrow`、Deployer 空 OwnerName、方块实体备份等（由 Ponder Fix 缓解，无法保证 100% 教程可点）。
+- 大型传动网络在低配设备上 TPS/FPS 压力大（上游通病）。
+- 无源码仓无法接受“改 Create 本体”的 PR；请对 Fix 模组或配置侧提需求。
 
-**RongMC** Minecraft 26.3 Fabric port / maintenance / original build of `Create (Fly / Zurrtum)`.
+## 许可
 
-- Fabric mod id: `create` (provides: `create`)
-- License: **GNU GPL v3.0**
-- No maintainable full Create source tree locally; this repo ships docs + GPL license; binaries are on Releases.
-- Some changes were made with vibecoding (AI-assisted coding), then reviewed and tested by humans.
-- Contributors: only [ycrrongos](https://github.com/ycrrongos)
-
-> **Create Fly 例外 / Exception:** bytecode hardcodes `getModContainer("create")`, so Fabric id stays `create`; jar name uses `rongmc-` prefix.
-
-### License
-
-Released under GNU GPL v3.0 (see `LICENSE`). Respect upstream terms where applicable; RongMC changes are GPL-3.0.
+本仓文档与发行包装以 **GPL-3.0** 提供（见 `LICENSE`）。Create 上游本身另有许可证，使用二进制时请同时遵守上游条款。
