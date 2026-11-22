@@ -2,28 +2,21 @@
 
 [简体中文](./README.md) · English
 
-The Create Fabric distribution used by RongMC for mechanical power, automation, logistics, contraptions and trains. This repository provides releases and documentation; see upstream for the full Create source and game guide.
 
-## Download and installation
+Start with a water wheel and gears, then route power through shafts to build an automated workshop. Create also includes conveyor belts, moving contraptions and trains. In-game Ponder scenes demonstrate how mechanisms fit together. This repository distributes the 26.3 Fabric build used by RongMC.
 
-- Version · [v6.0.9-2](https://github.com/OpenRongMC/Create-Fly/releases/tag/v6.0.9-2) (Release)
-- Release asset · `rongmc-create-fly-26.3-6.0.9-2.jar`
-- Runtime · Minecraft Java 26.3, Fabric, Java 25
-- Fabric mod ID · `create`
+## In game
 
-Place the release JAR in the instance’s `mods/` directory. Install the same Create Fly release on both sides. Its Fabric ID is create, so use a single Create distribution per instance. Add a matching Create Fly Ponder Fix where appropriate.
+Get the full sources from [Create Fly](https://github.com/ZurrTum/Create-Fly). See the [companion patch](https://github.com/OpenRongMC/Create-Fly-Ponder-Fix) for the known Ponder and deployer crashes.
 
-## How to try it
+## Installation
 
-Test a water wheel and shaft first, then try a Ponder scene. Check each third-party Create addon’s support for this Fly release and Minecraft 26.3.
+Download **v6.0.9-2** from [GitHub Releases](https://github.com/OpenRongMC/Create-Fly/releases/tag/v6.0.9-2) for Minecraft Java **26.3** on **Fabric** with **Java 25**. Place the release JAR in the instance’s `mods/` directory. Install the same Create Fly release on both sides. Its Fabric ID is create, so use a single Create distribution per instance. Add a matching Create Fly Ponder Fix where appropriate.
 
-## Documentation and support
+## Original project
 
-- [Previous README (historical guide, contributors and credits)](https://github.com/OpenRongMC/Create-Fly/blob/e5ecb84694705db8ce0241e028deb8c1881740f4/README.md)
-- [Upstream project and documentation](https://github.com/ZurrTum/Create-Fly)
-- [Create Fly Ponder Fix](https://github.com/OpenRongMC/Create-Fly-Ponder-Fix)
-- [Report a RongMC port issue](https://github.com/OpenRongMC/Create-Fly/issues) · Include the game version, client and server JAR names, reproduction steps and relevant logs.
+[Create Fly · RongMC Distribution](https://github.com/ZurrTum/Create-Fly)
 
 ## License and credits
 
-See this repository’s [LICENSE](./LICENSE) and the original project’s license, credits and third-party asset notices.
+See [LICENSE](./LICENSE) and the original project credits.
